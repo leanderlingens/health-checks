@@ -27,7 +27,7 @@ Before you get started, ensure you have the following prerequisites:
 1. Create a user for the health-check scripts.
 2. Create the directory `mkdir -p /opt/git`.
 3. Change to the directory `cd /opt/git`.
-4. Clone this repository using the following command: `git clone https://github.com/cubyverse/health-checks.git`
+4. Clone this repository using the following command: `git clone https://github.com/leanderlingens/health-checks.git`
 5. Log in as the user with whom the scripts are to be executed.
 6. Change to the directory `cd /opt/git/health-checks`.
 7. Run the installation script: `./installation.sh`
@@ -58,9 +58,9 @@ health-check ALL=(ALL) NOPASSWD: /usr/bin/apt list --upgradable
 */5 * * * *     health-check	/opt/git/health-checks/check_process_count.sh >/dev/null 2>&1
 */15 * * * *    health-check	/opt/git/health-checks/check_service_failed.sh >/dev/null 2>&1
 0 */6 * * *     health-check	/opt/git/health-checks/check_needrestart.sh >/dev/null 2>&1
-0 */12 * * *	health-check	/opt/git/health-checks/check_update_apt.sh >/dev/null 2>&1
-0 */24 * * *	health-check	/opt/git/health-checks/check_reboot_required.sh >/dev/null 2>&1
-0 */24 * * *	health-check	/opt/git/health-checks/check_uptime.sh >/dev/null 2>&1
+0 */12 * * *    health-check	/opt/git/health-checks/check_update_apt.sh >/dev/null 2>&1
+0 */24 * * *    health-check	/opt/git/health-checks/check_reboot_required.sh >/dev/null 2>&1
+0 */24 * * *    health-check	/opt/git/health-checks/check_uptime.sh >/dev/null 2>&1
 ```
 
 ## Contributing
